@@ -59,14 +59,14 @@ while ($true) {
         Write-Host ""
     }
     
-    Write-Host "  [1] " -NoNewline; Write-Host "💰 Add Coins + Diamonds + Stars + Energy" -ForegroundColor Green
-    Write-Host "  [2] " -NoNewline; Write-Host "👧 Unlock All Girls + Skins" -ForegroundColor Magenta
-    Write-Host "  [3] " -NoNewline; Write-Host "📺 Unlock All Streams + Chats" -ForegroundColor Cyan
-    Write-Host "  [4] " -NoNewline; Write-Host "🎟️  Get Battle Pass Premium (Level 100)" -ForegroundColor Yellow
-    Write-Host "  [5] " -NoNewline; Write-Host "⚡ Get All Abilities (x99)" -ForegroundColor LightGray
-    Write-Host "  [6] " -NoNewline; Write-Host "🚀 UNLOCK EVERYTHING (Recommended)" -ForegroundColor White
-    Write-Host "  [7] " -NoNewline; Write-Host "🔓 Remove read-only lock (restore saves)" -ForegroundColor DarkGray
-    Write-Host "  [0] " -NoNewline; Write-Host "❌ Exit" -ForegroundColor Red
+    Write-Host "  [1] " -NoNewline; Write-Host "Add Coins + Diamonds + Stars + Energy" -ForegroundColor Green
+    Write-Host "  [2] " -NoNewline; Write-Host "Unlock All Girls + Skins" -ForegroundColor Magenta
+    Write-Host "  [3] " -NoNewline; Write-Host "Unlock All Streams + Chats" -ForegroundColor Cyan
+    Write-Host "  [4] " -NoNewline; Write-Host "Get Battle Pass Premium (Level 100)" -ForegroundColor Yellow
+    Write-Host "  [5] " -NoNewline; Write-Host "Get All Abilities (x99)" -ForegroundColor LightGray
+    Write-Host "  [6] " -NoNewline; Write-Host "UNLOCK EVERYTHING (Recommended)" -ForegroundColor White
+    Write-Host "  [7] " -NoNewline; Write-Host "Remove read-only lock (restore saves)" -ForegroundColor DarkGray
+    Write-Host "  [0] " -NoNewline; Write-Host "Exit" -ForegroundColor Red
     Write-Host ""
     Write-Host (Get-RainbowText "==================================================" $phase)
     Write-Host "  Select option [0-7]: " -NoNewline
