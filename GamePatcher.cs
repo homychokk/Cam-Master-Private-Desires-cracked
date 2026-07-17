@@ -98,6 +98,11 @@ class Program
                 var energyType = module.Types.FirstOrDefault(t => t.Name == "Energy");
                 if (energyType != null) PatchReturnTrue(energyType.Methods.FirstOrDefault(m => m.Name == "get_IsInfinity"));
                 Console.WriteLine("Infinite energy enabled.");
+                
+                // Hack 5: Unlock all girls for streams
+                var girlDataType = module.Types.FirstOrDefault(t => t.Name == "GirlData");
+                if (girlDataType != null) PatchReturnTrue(girlDataType.Methods.FirstOrDefault(m => m.Name == "get_OpenOnStream"));
+                Console.WriteLine("All girls unlocked for streaming.");
 
                 Console.WriteLine("Saving modified assembly...");
                 module.Write();
