@@ -55,6 +55,7 @@ class Program
                         var loadFld = processor2.Create(OpCodes.Ldfld, rewardsField); // this.rewards
                         var loadTrue = processor2.Create(OpCodes.Ldc_I4_1); // true
                         var callGet = processor2.Create(OpCodes.Callvirt, module.ImportReference(getMethod));
+                        var popInstr = processor2.Create(OpCodes.Pop); // <-- pop the returned List<Reward>
                         var retInstr = processor2.Create(OpCodes.Ret);
                         
                         processor2.InsertBefore(firstInstr2, loadArg0);
@@ -62,6 +63,7 @@ class Program
                         processor2.InsertBefore(firstInstr2, loadFld);
                         processor2.InsertBefore(firstInstr2, loadTrue);
                         processor2.InsertBefore(firstInstr2, callGet);
+                        processor2.InsertBefore(firstInstr2, popInstr);
                         processor2.InsertBefore(firstInstr2, retInstr);
                     } else {
                         Console.WriteLine("InGamePurchase already patched.");
