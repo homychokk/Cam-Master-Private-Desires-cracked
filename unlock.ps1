@@ -111,7 +111,6 @@ while ($true) {
             $j.BattlePassPremium = $true
             $j.CurBattlePassLvl = 100
             $j.CurBattlePassScore = 9999999
-            $j.IssuedPurchases = @($j.IssuedPurchases) + @("bundle_battle_pass", "bundle_battle_pass_premium", "battle_pass_premium", "battle_pass", "premium_pass")
             $j | ConvertTo-Json -Depth 15 | Set-Content $savePath -Encoding UTF8
             $message = "Battle Pass Premium Level 100 activated!"
             $messageColor = "Yellow"
@@ -143,7 +142,6 @@ while ($true) {
             $j.BattlePassPremium = $true
             $j.CurBattlePassLvl = 100
             $j.CurBattlePassScore = 9999999
-            $j.IssuedPurchases = @($j.IssuedPurchases) + @("bundle_battle_pass", "bundle_battle_pass_premium", "battle_pass_premium", "battle_pass", "premium_pass")
             foreach ($g in $j.Girls.PSObject.Properties) {
                 $g.Value.Lvl = 100
                 $g.Value.LvlScore = 99999
