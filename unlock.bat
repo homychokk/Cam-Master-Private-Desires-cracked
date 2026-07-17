@@ -1,16 +1,8 @@
-<# :
-@echo off
-cls
-powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((Get-Content -LiteralPath '%~f0') -join [char]10)"
-exit /b
-#>
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((Get-Content -LiteralPath '%~f0') | Where-Object { $_ -notlike '@*' -and $_ -notlike 'exit*' })" & exit /b
 
 # Enable ANSI escape codes
 [ValType] | Out-Null
 $stdHandle = [System.Runtime.InteropServices.Marshal]::GetStdHandle(-11)
-# Enable virtual terminal processing
-$mode = 0
-$rt = [System.Runtime.InteropServices.Marshal]::GetPropertyValue([System.IntPtr]::Zero, "Console")
 
 # Rainbow Text Generator
 function Get-RainbowText ($text, $phase) {
