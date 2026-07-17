@@ -1,4 +1,5 @@
-@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((Get-Content -LiteralPath '%~f0') | Where-Object { $_ -notlike '@*' -and $_ -notlike 'exit*' })" & exit /b
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (((Get-Content -LiteralPath '%~f0') | Where-Object { $_ -notlike '@*' -and $_ -notlike 'exit*' }) -join [char]10)"
+@exit /b
 
 # Enable ANSI escape codes
 [ValType] | Out-Null
