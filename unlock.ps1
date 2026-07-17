@@ -140,6 +140,7 @@ while ($true) {
             }
             "4" {
                 $j = Get-Content $savePath -Raw | ConvertFrom-Json
+                $j.BattlePassCurTheme = 1
                 $j.BattlePassPremium = $true
                 $j.CurBattlePassLvl = 100
                 $j.CurBattlePassScore = 9999999
@@ -170,6 +171,7 @@ while ($true) {
                 $j.InfinityEnergyTime = "2099-12-31T23:59:59"
                 $j.InfinityThunderTime = "2099-12-31T23:59:59"
                 $j.InfinityAddTimeTime = "2099-12-31T23:59:59"
+                $j.BattlePassCurTheme = 1
                 $j.BattlePassPremium = $true
                 $j.CurBattlePassLvl = 100
                 $j.CurBattlePassScore = 9999999
