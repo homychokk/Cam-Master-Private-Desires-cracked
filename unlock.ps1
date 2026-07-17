@@ -117,9 +117,9 @@ while ($true) {
             "2" {
                 $j = Get-Content $savePath -Raw | ConvertFrom-Json
                 foreach ($g in $j.Girls.PSObject.Properties) {
-                    $g.Value.Lvl = 10
-                    $g.Value.LvlScore = 9999
-                    $g.Value.UnlockSkins = @(0,1,2,3,4,5)
+                    $g.Value.Lvl = 100
+                    $g.Value.LvlScore = 99999
+                    $g.Value.UnlockSkins = @(0,1,2,3,4,5,6,7,8,9,10)
                     $g.Value.RewardCount = 99
                 }
                 $j | ConvertTo-Json -Depth 15 | Set-Content $savePath -Encoding UTF8
@@ -152,8 +152,8 @@ while ($true) {
             }
             "5" {
                 $j = Get-Content $savePath -Raw | ConvertFrom-Json
-                $j.AbilityCount = @(99,99,99,99,99,99)
-                $j.EventAbilityCount = @(99,99,99,99,99,99)
+                $j.AbilityCount = @(999,999,999,999,999,999)
+                $j.EventAbilityCount = @(999,999,999,999,999,999)
                 $j.InfinityEnergyTime = "2099-12-31T23:59:59"
                 $j.InfinityThunderTime = "2099-12-31T23:59:59"
                 $j.InfinityAddTimeTime = "2099-12-31T23:59:59"
@@ -168,8 +168,8 @@ while ($true) {
                 $j.Stars = 99999
                 $j.Energy = 999
                 $j.EventCoins = 999999
-                $j.AbilityCount = @(99,99,99,99,99,99)
-                $j.EventAbilityCount = @(99,99,99,99,99,99)
+                $j.AbilityCount = @(999,999,999,999,999,999)
+                $j.EventAbilityCount = @(999,999,999,999,999,999)
                 $j.InfinityEnergyTime = "2099-12-31T23:59:59"
                 $j.InfinityThunderTime = "2099-12-31T23:59:59"
                 $j.InfinityAddTimeTime = "2099-12-31T23:59:59"
@@ -180,9 +180,9 @@ while ($true) {
                 $j.BattlePassNotCollectedRewards = @()
                 $j.BattlePassNotCollectedPremiumRewards = @()
                 foreach ($g in $j.Girls.PSObject.Properties) {
-                    $g.Value.Lvl = 10
-                    $g.Value.LvlScore = 9999
-                    $g.Value.UnlockSkins = @(0,1,2,3,4,5)
+                    $g.Value.Lvl = 100
+                    $g.Value.LvlScore = 99999
+                    $g.Value.UnlockSkins = @(0,1,2,3,4,5,6,7,8,9,10)
                     $g.Value.RewardCount = 99
                 }
                 foreach ($s in $j.StreamGirls.PSObject.Properties) {
